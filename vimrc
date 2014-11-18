@@ -131,8 +131,9 @@ nnoremap <leader>v V`]
 " Exit out of insert mode with jj
 inoremap jj <ESC>
 
+let g:zenburn_high_Contrast=1
+colorscheme zenburn
 if has("gui_running")
-  colorscheme papayawhip
   set guifont=Consolas:h8
   set guioptions=cerL
   set columns=120
@@ -142,7 +143,4 @@ if has("gui_running")
   syntax match BadSpace /^\t/
   syntax match BadSpace /\s\+$/
   highlight BadSpace guibg=chocolate
-else
-  let g:zenburn_high_Contrast=1
-  colorscheme zenburn
 endif
