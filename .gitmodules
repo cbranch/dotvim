@@ -16,3 +16,9 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/vim-javascript-syntax"]
+	path = bundle/vim-javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule "bundle/JavaScript-Indent"]
+	path = bundle/JavaScript-Indent
+	url = https://github.com/vim-scripts/JavaScript-Indent
