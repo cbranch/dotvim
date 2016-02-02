@@ -22,3 +22,18 @@
 [submodule "bundle/JavaScript-Indent"]
 	path = bundle/JavaScript-Indent
 	url = https://github.com/vim-scripts/JavaScript-Indent
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "bundle/YCM-Generator"]
+	path = bundle/YCM-Generator
+	url = https://github.com/rdnetto/YCM-Generator
+[submodule "bundle/color_coded"]
+	path = bundle/color_coded
+	url = https://github.com/jeaye/color_coded.git

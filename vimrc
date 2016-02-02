@@ -35,6 +35,7 @@ set wildmode=full
 set visualbell
 set list
 set listchars=tab:·\ 
+set tags=tags;
 
 nnoremap j gj
 nnoremap k gk
@@ -94,8 +95,8 @@ set ignorecase
 set infercase
 set shiftround
 set smartcase
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set tabstop=4
 set colorcolumn=120
 set formatoptions=qrn1 
@@ -119,10 +120,7 @@ let g:NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
 nmap <leader>e :NERDTreeToggle<CR>
 
-"F7 WordProcessorOn 
-map <F7> :set linebreak<CR>:set display+=lastline<CR>:set wrap<CR>:setlocal spell spelllang=en_gb<CR>
-"F8 WordProcessorOff 
-map <F8> :set nowrap<CR>:set nospell<CR>
+map <F8> :TagbarToggle<CR>
 
 " Strip trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -134,7 +132,7 @@ inoremap jj <ESC>
 let g:zenburn_high_Contrast=1
 colorscheme zenburn
 if has("gui_running")
-  set guifont=Consolas:h8
+  set guifont=Consolas:h11
   set guioptions=cerL
   set columns=120
   set textwidth=0
@@ -144,3 +142,44 @@ if has("gui_running")
   syntax match BadSpace /\s\+$/
   highlight BadSpace guibg=chocolate
 endif
+
+" YouCompleteMe
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"let g:go_fmt_command = "goimports"
+
+" TagBar for Go
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+" quick commands for hex editing using xxd
+command HexEdit %!xxd
+command HexEnd %!xxd -r
