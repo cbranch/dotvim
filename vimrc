@@ -98,7 +98,7 @@ set smartcase
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set colorcolumn=120
+set colorcolumn=80
 set formatoptions=qrn1 
 
 set foldenable
@@ -149,7 +149,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-"let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "goimports"
 
 " TagBar for Go
 let g:tagbar_type_go = {
